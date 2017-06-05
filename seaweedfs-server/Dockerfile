@@ -10,9 +10,7 @@ RUN apt-get install -y python-software-properties
 #RUN apt-get update
 RUN apt-get install -y golang-go git-core mercurial
 
-RUN mkdir -p /usr/webserver/go/seaweedfs
-RUN mkdir -p /usr/webserver/go/bin
-RUN mkdir -p /usr/local/go/bin
+RUN mkdir -p /opt/go/seaweedfs
 #数据目录
 RUN mkdir -p /var/seaweedfs/data
 
@@ -21,10 +19,10 @@ COPY profile_plug /tmp/profile_plug
 RUN cat /tmp/profile_plug >> /etc/profile
 
 #weed项目
-COPY weed /usr/webserver/go/seaweedfs/weed
-RUN chmod 777 /usr/webserver/go/seaweedfs/weed
+COPY weed /opt/go/seaweedfs/weed
+RUN chmod 777 /opt/go/seaweedfs/weed
 
-WORKDIR /usr/webserver/go/
+WORKDIR /opt/go/
 
 COPY start.sh /usr/bin/start.sh
 

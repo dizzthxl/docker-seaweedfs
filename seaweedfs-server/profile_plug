@@ -1,5 +1,1 @@
-﻿GOHOME=/usr/local
-GOROOT=$GOHOME/go
-GOPATH=/usr/webserver/go/
-PATH=$PATH:$GOROOT/bin
-PATH=$PATH:$GOPATH/bin
+﻿GOPATH=/opt/go/
