@@ -9,7 +9,6 @@ docker run -itd -p 9333:9333 --name seaweedfs-master ubuntu-seaweedfs master -de
 
 docker run -itd -p 9333:9333 --name seaweedfs-master ubuntu-seaweedfs master -ip="192.168.126.245" -port=9333
 
-
 #volume(需要挂载目录到宿主机)
 docker run -itd -p 9080:9080 --name seaweedfs-volume -v /var/seaweedfs/data:/var/seaweedfs/data ubuntu-seaweedfs volume -dir="/var/seaweedfs/data" -max=5 -mserver="192.168.126.245:9333" -ip="192.168.126.245" -port=9080
 
