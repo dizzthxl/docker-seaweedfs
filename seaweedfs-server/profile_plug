@@ -1,5 +1,5 @@
 ﻿GOHOME=/usr/local
-export GOROOT=$GOHOME/go
-export GOPATH=/usr/webserver/go/
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:$GOPATH/bin
+GOROOT=$GOHOME/go
+GOPATH=/usr/webserver/go/
+PATH=$PATH:$GOROOT/bin
+PATH=$PATH:$GOPATH/bin
